@@ -12,5 +12,5 @@ test('Login flow: should show Logout button after successful login', async ({ pa
   await page.click('#login');
 
   // Assert that the Logout button is visible
-  await expect(page.getByRole('button', { name: 'Log out' })).toBeVisible({ timeout: 10000 });
+  await expect(page.getByText('button', { name: 'Log out' })).toBeVisible({ timeout: 10000 });
 }); 
