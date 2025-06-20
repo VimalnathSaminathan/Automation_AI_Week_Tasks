@@ -1,0 +1,14 @@
+{
+  "name": "playwright_aidemo",
+  "version": "1.0.0",
+  "description": "Playwright automation demo for login flow.",
+  "main": "login.spec.js",
+  "scripts": {
+    "test": "npx playwright test"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.43.1"
+  }
+} 
