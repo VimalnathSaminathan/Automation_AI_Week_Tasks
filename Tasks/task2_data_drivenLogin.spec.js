@@ -2,8 +2,6 @@ const { test, expect } = require('@playwright/test');
 const fs = require('fs');
 const path = require('path');
 
-test.use({ headless: false }); // this line for headless mode
-
 // Read login data from JSON file
 const loginDataPath = path.join(__dirname, 'login_data.json');
 const loginData = JSON.parse(fs.readFileSync(loginDataPath, 'utf-8'));
