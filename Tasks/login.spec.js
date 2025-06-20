@@ -1,7 +1,5 @@
 const { test, expect } = require('@playwright/test');
 
-test.use({ headless: false }); // this line for headless mode
-
 test('Login flow: should show Logout button after successful login', async ({ page }) => {
   // Navigate to the login page
   await page.goto('https://demoqa.com/login');
