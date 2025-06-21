@@ -1,5 +1,6 @@
 const { test, expect } = require('@playwright/test');
 
+
 test('Login flow: should show Logout button after successful login', async ({ page }) => {
   // Navigate to the login page
   await page.goto('https://demoqa.com/login');
@@ -10,6 +11,9 @@ test('Login flow: should show Logout button after successful login', async ({ pa
 
   // Click the login button
   await page.click('#login');
+
+  // Wait for the URL to change to the profile page
+  await page.waitForURL('**/profile');
 
   // Assert that the Logout button is visible
   await expect(page.getByRole('button', { name: 'Log out' })).toBeVisible({ timeout: 10000 });
